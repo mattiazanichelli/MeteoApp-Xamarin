@@ -1,0 +1,128 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="MeteoAppSkeleton.Views.LocationDetailsPage">
+   <ContentPage.Content>
+      <RelativeLayout x:Name="containerLayout">
+         <Image
+                    x:Name="imageBanner"
+                    Source="{Binding ImageURL}"
+                    RelativeLayout.WidthConstraint="{ConstraintExpression  
+                                                        Type=RelativeToParent,
+                                                        Property=Width,
+                                                        Factor=1}"
+                    RelativeLayout.HeightConstraint="{ConstraintExpression
+                                                            Type=RelativeToParent,
+                                                            Property=Height,
+                                                            Factor=0.3}"
+            ></Image>
+
+         <Label Text="{Binding Location.Name}" 
+                   FontSize="Title"
+                   HorizontalTextAlignment="Center"
+                   RelativeLayout.WidthConstraint="{ConstraintExpression
+                                                    Type=RelativeToParent,
+                                                    Property=Width,
+                                                    Factor=1}"
+                   RelativeLayout.YConstraint="{ConstraintExpression
+                                                Type=RelativeToView,
+                                                ElementName=imageBanner,
+                                                Property=Height,
+                                                Factor=1,
+                                                Constant=20}"
+                   RelativeLayout.XConstraint="{ConstraintExpression  
+                                                Type=RelativeToParent,
+                                                Property=Width,
+                                                Factor=0}"
+			></Label>
+
+         <Label Text="Current" 
+                   HorizontalTextAlignment="Center"
+                  RelativeLayout.YConstraint="{ConstraintExpression
+                                                Type=RelativeToParent,
+                                                Property=Height,
+                                                Factor=0.67}"
+                   RelativeLayout.XConstraint="{ConstraintExpression  
+                                                Type=RelativeToParent,
+                                                Property=Width,
+                                                Factor=0.15}"
+			></Label>
+
+         <Label Text="{Binding CurrentTemperature, StringFormat='{0:N2}C°'}"  
+                   x:Name="currentTemperatureText"
+                   HorizontalTextAlignment="Center"
+                   FontSize="50" 
+                   RelativeLayout.YConstraint="{ConstraintExpression
+                                                Type=RelativeToParent,
+                                                Property=Height,
+                                                Factor=0.69}"
+                   RelativeLayout.XConstraint="{ConstraintExpression  
+                                                Type=RelativeToParent,
+                                                Property=Width,
+                                                Factor=0.05}"
+			></Label>
+
+
+         <Label Text="Maximum" 
+                   HorizontalTextAlignment="Center"
+                   RelativeLayout.YConstraint="{ConstraintExpression
+                                                Type=RelativeToParent,
+                                                Property=Height,
+                                                Factor=0.6}"
+                   RelativeLayout.XConstraint="{ConstraintExpression  
+                                                Type=RelativeToParent,
+                                                Property=Width,
+                                                Factor=0.70}"
+			></Label>
+
+
+         <Label Text="{Binding MaximumTemperature, StringFormat='{0:N2}C°'}" 
+                   x:Name="maximumTemperatureText"
+                   FontSize="35" 
+                   HorizontalTextAlignment="Center"
+                   RelativeLayout.YConstraint="{ConstraintExpression
+                                                Type=RelativeToParent,
+                                                Property=Height,
+                                                Factor=0.62}"
+                   RelativeLayout.XConstraint="{ConstraintExpression  
+                                                Type=RelativeToParent,
+                                                Property=Width,
+                                                Factor=0.655}"
+                   
+            ></Label>
+
+         <Label Text="Minimum" 
+                   HorizontalTextAlignment="Center"
+                   RelativeLayout.YConstraint="{ConstraintExpression
+                                                Type=RelativeToParent,
+                                                Property=Height,
+                                                Factor=0.8}"
+                   RelativeLayout.XConstraint="{ConstraintExpression  
+                                                Type=RelativeToParent,
+                                                Property=Width,
+                                                Factor=0.70}"
+			></Label>
+
+
+         <Label Text="{Binding MinimumTemperature, StringFormat='{0:N2}C°'}" 
+                   x:Name="minimumTemperatureText"
+                   FontSize="35" 
+                   HorizontalTextAlignment="Center"
+                   RelativeLayout.YConstraint="{ConstraintExpression
+                                                Type=RelativeToParent,
+                                                Property=Height,
+                                                Factor=0.82}"
+                   RelativeLayout.XConstraint="{ConstraintExpression  
+                                                Type=RelativeToParent,
+                                                Property=Width,
+                                                Factor=0.655}"
+                   
+            ></Label>
+
+
+
+
+      </RelativeLayout>
+
+
+
+   </ContentPage.Content>
+</ContentPage>
